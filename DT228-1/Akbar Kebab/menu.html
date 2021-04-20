@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		
+<title>Our Menus</title>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
+<meta name="description" content="Bookblock: A Content Flip Plugin - demo" />
+		<meta name="keywords" content="javascript, jquery, plugin, css3, flip, page, 3d, booklet, book, perspective" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="Assets/CSS/default.css" />
+		<link rel="stylesheet" type="text/css" href="Assets/CSS/bookblock.css" />
+		<!-- custom demo style -->
+		<link rel="stylesheet" type="text/css" href="Assets/CSS/demo4.css" />	
+		<script src="Assets/JS/modernizr_custom.js"></script>
+</head>
+
+<body bgcolor="#178c8c">
+
+<div class="container">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="menu.html">Our Menu</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Order.html">Online Orders</a></li>
+        <li><a href="About.html">About</a></li>
+      </ul>
+      
+      <div class="bb-custom-wrapper">
+				
+				<div id="bb-bookblock" class="bb-bookblock">
+					<div class="bb-item">
+						<div class="bb-custom-firstpage">
+							<h1>Akbar Kebab Menu <span>Persian Style Food</span></h1>	
+							
+								
+						</div>
+						<div class="bb-custom-side">
+							<p><FONT COLOR="000">Kobideh</FONT></br></br>
+							</br>Mixed of Beef and Lamb Mince</br>
+							</br>Cooked really slowly</br>
+							</br>9.50</br></p>
+							
+                            
+						</div>
+					</div>
+					<div class="bb-item">
+						<div class="bb-custom-side">
+							<p><FONT COLOR="000">Lamb Kebab</FONT></br></br>
+							</br>100% Lamb</br>
+							</br> cooked slowly</br>
+							</br>9.50</br></p>
+                           
+						</div>
+						<div class="bb-custom-side">
+							<p><FONT COLOR="000">Chiken wings(Persian Style)</FONT></br></br>
+							</br>Chiken wings cooked in iranian style</br>
+							</br>with special Sauce</br>
+							</br>6.99</br></p>
+                        </div>
+					</div>
+					<div class="bb-item">
+						<div class="bb-custom-side">
+							<p><FONT COLOR="000">Barg Kebab</FONT></br></br>
+							</br>100% Beef, Irish Beef</br>
+							</br>cooked slowly</br>
+							</br>12</br></p>
+                           
+						</div>
+						<div class="bb-custom-side">
+							<p><FONT COLOR="000">Donner Chicken </FONT></br></br>
+							</br>Turkish Style</br>
+							</br>8.50</br></p>
+                           
+						</div>
+					</div>
+					<div class="bb-item">
+						<div class="bb-custom-side">
+							<p></br></br><FONT COLOR="000">Donner Beef</FONT></br></br>
+							</br>Turkish Style</br>
+							</br>10.50</br></p>
+
+						</div>
+						<div class="bb-custom-side">
+							<p></br></br><FONT COLOR="000">Donner Lamb</FONT></br></br>
+							</br>Turkish Style</br>
+							</br>8.50</br></p>
+						</div>
+					</div>
+					<div class="bb-item">
+						<div class="bb-custom-side">
+							<p><FONT COLOR="000">Seafood</FONT></br></br>
+							</br>Suprise Seafood</br>
+							</br>13.50</br></p>
+
+						</div>
+						<div class="bb-custom-side">
+							<p><FONT COLOR="000">Pizza</FONT></br></br>
+                             The Special - €12.00</br>
+							 ham, pepperoni, mushroom, red onion, sweetcorn, green peppers & mozzarella </br></br>
+							 The Persian Job - €12.00</br>
+							 chicken, pepperoni, ham, black olives, mozzarella</br></br>
+							 Cheese Quartet - €12.00</br>
+							 goats cheese, feta, mozzarella, cheddar</br></br>
+							 Neptune - €12.00</br>
+							 tuna, prawns, capers, sweetcorn, mozzarella</br></br>
+							 Spicy - €12.00</br>
+							 cajun chicken, red onion, green pepper, jalapeño, mozzarella</p>
+						</div>
+					</div>
+				</div>
+
+				<nav>
+					<a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a>
+					<a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
+					<a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
+					<a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
+				</nav>
+
+			</div>
+
+		</div><!-- /container -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="Assets/JS/jquerypp_custom.js"></script>
+		<script src="Assets/JS/jquery_bookblock.js"></script>
+		<script>
+			var Page = (function() {
+				
+				var config = {
+						$bookBlock : $( '#bb-bookblock' ),
+						$navNext : $( '#bb-nav-next' ),
+						$navPrev : $( '#bb-nav-prev' ),
+						$navFirst : $( '#bb-nav-first' ),
+						$navLast : $( '#bb-nav-last' )
+					},
+					init = function() {
+						config.$bookBlock.bookblock( {
+							speed : 1000,
+							shadowSides : 0.8,
+							shadowFlip : 0.4
+						} );
+						initEvents();
+					},
+					initEvents = function() {
+						
+						var $slides = config.$bookBlock.children();
+						// add navigation events
+						config.$navNext.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'next' );
+							return false;
+						} );
+						config.$navPrev.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'prev' );
+							return false;
+						} );
+						config.$navFirst.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'first' );
+							return false;
+						} );
+						config.$navLast.on( 'click touchstart', function() {
+							config.$bookBlock.bookblock( 'last' );
+							return false;
+						} );
+						
+						// add swipe events
+						$slides.on( {
+							'swipeleft' : function( event ) {
+								config.$bookBlock.bookblock( 'next' );
+								return false;
+							},
+							'swiperight' : function( event ) {
+								config.$bookBlock.bookblock( 'prev' );
+								return false;
+							}
+						} );
+						// add keyboard events
+						$( document ).keydown( function(e) {
+							var keyCode = e.keyCode || e.which,
+								arrow = {
+									left : 37,
+									up : 38,
+									right : 39,
+									down : 40
+								};
+							switch (keyCode) {
+								case arrow.left:
+									config.$bookBlock.bookblock( 'prev' );
+									break;
+								case arrow.right:
+									config.$bookBlock.bookblock( 'next' );
+									break;
+							}
+						} );
+					};
+					return { init : init };
+			})();
+		</script>
+		<script>
+				Page.init();
+		</script>
+       
+      
+      
+</body>
+</html>

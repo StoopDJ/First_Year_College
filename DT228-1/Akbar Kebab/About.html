@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>About</title>
+<link href="Assets/CSS/passion4food.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
+<script>
+function initialize()
+{
+	var myCenter=new google.maps.LatLng(53.3450501, -6.2709929);
+var mapProp = {
+  center:myCenter,
+  zoom:17,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+marker.setMap(map);
+}
+function loadScript()
+{
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyB8h66zxru0AShOxRVQ8LVjbLysPn2Gt1M&sensor=false&callback=initialize";
+  document.body.appendChild(script);
+}
+window.onload = loadScript;</script>
+</head>
+
+<body bgcolor="#178c8c">
+
+<div class="container">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Our Menus</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="Order.html">Online Orders</a></li>
+        <li class="active"><a href="About.html">About</a></li>
+      </ul>
+      
+      <div id="googleMap"></div>
+     
+     <div class="caption1"><h2>Location</h2>
+      27 Clanbrassil Street Upper</br>
+      Wood Quay,</br>
+      Co. Dublin</br>
+      Ireland</br></br>
+      Phone: (01) 410 0333</br>
+           </div>
+      
+      <div class="caption2"><h2>Public Transport / Parking</h2>
+      <a href="https://www.q-park.ie/en-gb/">QPARK Car Park</a></br>
+      <a href="http://www.irishrail.ie/about-us/dart-commuter">Tara ST Train Station</a></br>
+      </div>
+      
+      </div>
+      
+     
+
+</body>
+</html>
